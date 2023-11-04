@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://c81byx0v7lnj"]
+
+[ext_resource type="PackedScene" uid="uid://dy84otml1l5b5" path="res://scenes/eatur.tscn" id="1_rvixb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_agtes"]
+size = Vector2(0.999544, 1.01409)
+
+[sub_resource type="QuadMesh" id="QuadMesh_0sh5k"]
+
+[node name="TestScene" type="Node2D"]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(530, 460)
+scale = Vector2(548.25, 88.7499)
+shape = SubResource("RectangleShape2D_agtes")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2"]
+position = Vector2(530, 460)
+scale = Vector2(548.25, 88.7499)
+mesh = SubResource("QuadMesh_0sh5k")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(353, -135)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(530, 460)
+scale = Vector2(548.25, 88.7499)
+shape = SubResource("RectangleShape2D_agtes")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
+position = Vector2(530, 460)
+scale = Vector2(548.25, 88.7499)
+mesh = SubResource("QuadMesh_0sh5k")
+metadata/_edit_group_ = true
+
+[node name="Eatur" parent="." instance=ExtResource("1_rvixb")]
+position = Vector2(422, 373)
